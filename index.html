@@ -25,7 +25,7 @@
             position: relative;
         }
 
-        /* Background bintang */
+        /* Background */
         .stars {
             position: absolute;
             top: 0;
@@ -251,35 +251,11 @@
     <div class="stars" id="stars"></div>
     
     <div class="container">
-        <h1 class="title">GAME 3D ELIMENTAL BURIK 🇮🇩</h1>
-        
-        <div class="buttons">
-            <a href="https://herzxghitub.github.io/Elimental-2/multiplayer.html" class="btn">
-                <i class=" "></i>🌐 Play Online
-            </a>
-            <a href="https://herzxghitub.github.io/Chat/chat-grup.html" class="btn">
-                <i class=" "></i>💬 Group Chat - Online
-            </a>
-           <button class="btn" id="requestBtn">
-                <i class="✉️"></i>Request Fitur
-            </button>
-        </div>
-    </div>
-    <div class="music-controls">
-        <button class="music-btn" id="playMusic">▶️ Mulai Music</button>
-        <button class="music-btn" id="stopMusic">⏸️ Stop Music</button>
-    </div>
-    <-- request -->
-    <div class="modal" id="requestModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <h2>Kirim Request</h2>
-            <div class="request-form">
-                <textarea class="request-input" id="requestInput" placeholder="Tulis request Anda di sini..."></textarea>
-                <button class="send-btn" id="sendRequest">Kirim Request</button>
-            </div>
+        <h3 class="title">Halo Semua, Game ini Sedang di tutup dan Game ini Sedang Di perbaiki Untuk sementara Waktu, kami mohon untuk sebesar-besar nya🙏🏻</h3>
+         
+       
+    
             <div class="requests-list" id="requestsList">
-                <!-- Daftar request akan muncul di sini -->
             </div>
         </div>
     </div>
@@ -289,34 +265,10 @@
         <p>copyright by Taher!</p>
     </div>
 
-    <!-- Audio Element -->
-    <audio id="backgroundMusic" loop>
-        <source src="music.mp3" type="audio/mpeg">
-        Browser Anda tidak mendukung elemen audio.
-    </audio>
+    
 
     <script>
-        // Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyAQobSSWqAnctUFiGjf4RNMWueo3SV_fMY",
-            authDomain: "taher-my-id.firebaseapp.com",
-            databaseURL: "https://taher-my-id-default-rtdb.firebaseio.com",
-            projectId: "taher-my-id",
-            storageBucket: "taher-my-id.appspot.com",
-            messagingSenderId: "844154238987",
-            appId: "1:844154238987:web:7f7bb48c3c4a89f9442f0e",
-            measurementId: "G-MPK8W5SB88"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
         
-        // Generate random username
-        function generateUsername() {
-            const randomNum = Math.floor(Math.random() * 1000);
-            return `User${String(randomNum).padStart(3, '0')}`;
-        }
         
         const currentUser = generateUsername();
         
@@ -328,11 +280,7 @@
         const sendRequestBtn = document.getElementById('sendRequest');
         const requestsList = document.getElementById('requestsList');
         
-        // Music elements
-        const backgroundMusic = document.getElementById('backgroundMusic');
-        const playMusicBtn = document.getElementById('playMusic');
-        const stopMusicBtn = document.getElementById('stopMusic');
-        
+       
         // Open modal
         requestBtn.addEventListener('click', () => {
             requestModal.style.display = 'flex';
@@ -351,26 +299,8 @@
             }
         });
         
-        // Send request
-        sendRequestBtn.addEventListener('click', () => {
-            const message = requestInput.value.trim();
-            if (message) {
-                const requestData = {
-                    user: currentUser,
-                    message: message,
-                    timestamp: Date.now()
-                };
-                
-                // Save to Firebase
-                database.ref('requests').push(requestData)
-                    .then(() => {
-                        requestInput.value = '';
-                    })
-                    .catch((error) => {
-                        console.error('Error sending request:', error);
-                    });
-            }
-        });
+     
+       
     // IMPORTANT MESSAGE, READ THIS     
 // Hello everyone, I am Taher, this html code has credit and is not allowed to change it, and is in violation of copyright. 
 // So it is not allowed to change and replace credit, so don't allow it. 
